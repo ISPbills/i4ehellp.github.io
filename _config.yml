@@ -60,7 +60,7 @@ defaults:
     values:
       layout: redirect
 
-url: https://help.cloud66.com
+url: https://i4edu.github.io
 
 plugins:
   - jekyll-sitemap
