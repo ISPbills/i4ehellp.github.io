@@ -22,15 +22,20 @@ maestro:
   access_your_code:
     page: maestro/how-to-guides/common-tools/access-your-code.html
     page_anchors:
+    - adding-or-updating-github-accounts
     - bitbucket-example
-    - github-example
+    - deploying-manually-configured-github-repos
     - maestro-product-heading
+    - manually-configuring-github-access
+    - other-private-repositories
     - other-public-repos
-    - private-repositories
+    - overview
+    - private-github-repositories
     - public-github-repos
     - public-repositories
     - querying-git-hashes-for-services
     - using-github-with-maestro
+    - working-with-multiple-github-accounts
   account_index:
     page: maestro/account/index.html
     page_anchors:
@@ -88,12 +93,21 @@ maestro:
     page: maestro/how-to-guides/security/application-health-checks.html
     page_anchors:
     - configuring-a-post-deployment-check
-    - how-the-tests-work
+    - configuring-web-success-checks
+    - dealing-with-domain-access-controls
+    - deployment-success-checks
+    - global-availability-checks
+    - how-availability-tests-work
+    - load-balancer-health-checks
     - maestro-product-heading
     - overview
-    - post-deployment-health-checks
-    - running-an-on-demand-health-check
+    - post-deployment-global-availability-checks
+    - process-success-checks
+    - running-an-on-demand-check
+    - service-checks
+    - the-limitations-of-web-success-checks
     - viewing-results-of-post-deployment-checks
+    - web-success-checks
   application_protection:
     page: maestro/how-to-guides/common-tools/application-protection.html
     page_anchors:
@@ -248,11 +262,11 @@ maestro:
   cloud_azure:
     page: maestro/how-to-guides/clouds/cloud-azure.html
     page_anchors:
+    - azure-legacy-cloud
     - cloud-66-tag-propagation
     - generating-a-management-certificate
     - generating-credentials-for-azure-cloud
     - maestro-product-heading
-    - microsoft-azure-legacy
     - using-your-management-certificate
   cloud_clouda:
     page: maestro/how-to-guides/clouds/cloud-clouda.html
@@ -264,7 +278,6 @@ maestro:
     page_anchors:
     - authorise-cloud-66-with-digitalocean
     - cloud-66-tag-propagation
-    - external-links
     - maestro-product-heading
     - upgrading-account-keys
   cloud_gce:
@@ -382,15 +395,6 @@ maestro:
     - overview
     - using-the-max-surge-setting
     - using-the-max-unavailable-setting
-  connect_cloud66_to_git_repo:
-    page: maestro/references/connect-cloud66-to-git-repo.html
-    page_anchors:
-    - bitbucket-example
-    - github-example
-    - maestro-product-heading
-    - notice
-    - private-repositories
-    - public-repositories
   connect_db_servers:
     page: maestro/how-to-guides/databases/shells/connect-db-servers.html
     page_anchors:
@@ -418,6 +422,20 @@ maestro:
     - testing-your-changes
     - what-youll-need
     - whats-next
+  continuous_deployment:
+    page: maestro/how-to-guides/deployment/continuous-deployment.html
+    page_anchors:
+    - arguments
+    - continuous-deployment-via-redeployment-hooks
+    - continuous-deployment-via-the-cloud-66-toolbelt
+    - continuous-integration-tests
+    - enabling-automated-continuous-deployment
+    - examples
+    - maestro-product-heading
+    - overview
+    - the-cx-redeploy-command
+    - usage
+    - via-the-cloud-66-api
   custom_config:
     page: maestro/tutorials/custom-config.html
     page_anchors:
@@ -748,7 +766,7 @@ maestro:
     - how-much-does-it-cost
     - maestro-product-heading
     - what-is-cloud-66
-    - where-is-it-hosted
+    - where-is-cloud-66-hosted
     - which-clouds-are-supported
     - which-distributions-of-linux-are-supported
     - who-pays-for-the-servers
@@ -1143,6 +1161,7 @@ maestro:
     - docker
     - example-yaml-for-gateway
     - example-yaml-for-nginx
+    - example-yaml-for-post-deployment-global-availability-checks
     - examples-yaml-for-docker
     - gateway
     - key-to-table-headings
@@ -1150,7 +1169,7 @@ maestro:
     - more-on-manifest-files
     - nginx
     - overview
-    - post-deployment-health-checks
+    - post-deployment-availability-checks
   memcached:
     page: maestro/how-to-guides/add-ins/memcached.html
     page_anchors:
@@ -2167,13 +2186,18 @@ node:
   access_your_code:
     page: node/how-to-guides/common-tools/access-your-code.html
     page_anchors:
+    - adding-or-updating-github-accounts
     - bitbucket-example
-    - github-example
+    - deploying-manually-configured-github-repos
+    - manually-configuring-github-access
     - node-product-heading
+    - other-private-repositories
     - other-public-repos
-    - private-repositories
+    - overview
+    - private-github-repositories
     - public-github-repos
     - public-repositories
+    - working-with-multiple-github-accounts
   account_index:
     page: node/account/index.html
     page_anchors:
@@ -2222,12 +2246,20 @@ node:
     page: node/how-to-guides/security/application-health-checks.html
     page_anchors:
     - configuring-a-post-deployment-check
-    - how-the-tests-work
+    - configuring-web-success-checks
+    - dealing-with-domain-access-controls
+    - deployment-success-checks
+    - global-availability-checks
+    - how-availability-tests-work
+    - load-balancer-health-checks
     - node-product-heading
     - overview
-    - post-deployment-health-checks
-    - running-an-on-demand-health-check
+    - post-deployment-global-availability-checks
+    - process-success-checks
+    - running-an-on-demand-check
+    - the-limitations-of-web-success-checks
     - viewing-results-of-post-deployment-checks
+    - web-success-checks
   application_protection:
     page: node/how-to-guides/common-tools/application-protection.html
     page_anchors:
@@ -2373,10 +2405,10 @@ node:
   cloud_azure:
     page: node/how-to-guides/clouds/cloud-azure.html
     page_anchors:
+    - azure-legacy-cloud
     - cloud-66-tag-propagation
     - generating-a-management-certificate
     - generating-credentials-for-azure-cloud
-    - microsoft-azure-legacy
     - node-product-heading
     - using-your-management-certificate
   cloud_clouda:
@@ -2389,7 +2421,6 @@ node:
     page_anchors:
     - authorise-cloud-66-with-digitalocean
     - cloud-66-tag-propagation
-    - external-links
     - node-product-heading
     - upgrading-account-keys
   cloud_gce:
@@ -2482,15 +2513,6 @@ node:
     - changing-ports-in-your-application-code
     - node-product-heading
     - overview
-  connect_cloud66_to_git_repo:
-    page: node/references/connect-cloud66-to-git-repo.html
-    page_anchors:
-    - bitbucket-example
-    - github-example
-    - node-product-heading
-    - notice
-    - private-repositories
-    - public-repositories
   connect_db_servers:
     page: node/how-to-guides/databases/shells/connect-db-servers.html
     page_anchors:
@@ -2498,6 +2520,20 @@ node:
     - node-product-heading
     - via-ssh
     - with-a-client
+  continuous_deployment:
+    page: node/how-to-guides/deployment/continuous-deployment.html
+    page_anchors:
+    - arguments
+    - continuous-deployment-via-redeployment-hooks
+    - continuous-deployment-via-the-cloud-66-toolbelt
+    - continuous-integration-tests
+    - enabling-automated-continuous-deployment
+    - examples
+    - node-product-heading
+    - overview
+    - the-cx-redeploy-command
+    - usage
+    - via-the-cloud-66-api
   custom_config:
     page: node/tutorials/custom-config.html
     page_anchors:
@@ -2584,10 +2620,12 @@ node:
     - database-customization-variables
     - database-deployment-types
     - dedicated-database
+    - environment-variables-during-deployment
     - local-database
     - migrating-to-an-external-database
     - no-database-external
     - node-product-heading
+    - setting-variables-manually-overriding
     - upgrading-your-database
   database_replication:
     page: node/how-to-guides/databases/database-replication.html
@@ -2689,6 +2727,7 @@ node:
     - managing-environment-variables-using-toolbelt
     - node-product-heading
     - pre-defined-environment-variables
+    - referencing-env-vars-in-manifest-files
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -2718,7 +2757,7 @@ node:
     - how-much-does-it-cost
     - node-product-heading
     - what-is-cloud-66
-    - where-is-it-hosted
+    - where-is-cloud-66-hosted
     - which-clouds-are-supported
     - which-distributions-of-linux-are-supported
     - who-pays-for-the-servers
@@ -2740,9 +2779,7 @@ node:
     page: node/quickstarts/getting-started.html
     page_anchors:
     - accessing-your-git-repo
-    - bitbucket-content
     - choosing-a-deployment-target
-    - choosing-application-type
     - cloud-content
     - configuring-your-application
     - defining-your-application
@@ -2752,6 +2789,7 @@ node:
     - node-product-heading
     - other-git-content
     - server-build-states
+    - using-a-non-github-host
     - what-youll-need
   getting_started_with_manifest:
     page: node/quickstarts/getting-started-with-manifest.html
@@ -3042,13 +3080,14 @@ node:
     - cors-configuration
     - example-yaml-for-gateway
     - example-yaml-for-nginx
+    - example-yaml-for-post-deployment-global-availability-checks
     - gateway
     - key-to-table-headings
     - more-on-manifest-files
     - nginx
     - node-product-heading
     - overview
-    - post-deployment-health-checks
+    - post-deployment-availability-checks
   memcached:
     page: node/how-to-guides/add-ins/memcached.html
     page_anchors:
@@ -3927,13 +3966,18 @@ prepress:
   access_your_code:
     page: prepress/how-to-guides/common-tools/access-your-code.html
     page_anchors:
+    - adding-or-updating-github-accounts
     - bitbucket-example
-    - github-example
+    - deploying-manually-configured-github-repos
+    - manually-configuring-github-access
+    - other-private-repositories
     - other-public-repos
+    - overview
     - prepress-product-heading
-    - private-repositories
+    - private-github-repositories
     - public-github-repos
     - public-repositories
+    - working-with-multiple-github-accounts
   account_index:
     page: prepress/account/index.html
     page_anchors:
@@ -3966,6 +4010,12 @@ prepress:
     - deleting-an-application
     - prepress-product-heading
     - updating-application-properties
+  application_protection:
+    page: prepress/how-to-guides/common-tools/application-protection.html
+    page_anchors:
+    - enabling-application-protection
+    - prepress-product-heading
+    - what-is-application-protection
   application_transfer:
     page: prepress/account/application-transfer.html
     page_anchors:
@@ -4000,14 +4050,21 @@ prepress:
     page_anchors:
     - combined-example
     - dependency-configurations
+    - docusaurus-v1-example
+    - docusaurus-v2-example
     - framework-configurations
     - gatsby-example
     - hugo-example
+    - jekyll-example
+    - middleman-example
+    - nextjs-example
+    - nuxtjs-example
     - overview
     - prepress-product-heading
     - problems-upgrading
-    - ruby-example
+    - svelte-example
     - the-structure-of-a-manifest-file
+    - vuejs-example
     - whats-next
   cloud66_status:
     page: prepress/policies-specifications/cloud66-status.html
@@ -4033,6 +4090,57 @@ prepress:
     - prepress-product-heading
     - step-1-create-a-user
     - step-2-set-up-access-policies
+  cloud_azure:
+    page: prepress/how-to-guides/clouds/cloud-azure.html
+    page_anchors:
+    - azure-legacy-cloud
+    - generating-a-management-certificate
+    - generating-credentials-for-azure-cloud
+    - prepress-product-heading
+    - using-your-management-certificate
+  cloud_do:
+    page: prepress/how-to-guides/clouds/cloud-do.html
+    page_anchors:
+    - adding-spaces-to-your-cloud-66-account
+    - configuring-digitalocean-for-prepress
+    - prepress-product-heading
+  cloud_gce:
+    page: prepress/how-to-guides/clouds/cloud-gce.html
+    page_anchors:
+    - external-links
+    - generate-gce-api-keys
+    - prepress-product-heading
+  cloud_linode:
+    page: prepress/how-to-guides/clouds/cloud-linode.html
+    page_anchors:
+    - adding-linode-cloud-storage-to-your-cloud-66-account
+    - configuring-linode-for-prepress
+    - external-links
+    - prepress-product-heading
+  config_store:
+    page: prepress/how-to-guides/deployment/config-store.html
+    page_anchors:
+    - accessing-configstore-variables
+    - account-level
+    - application-level
+    - configstore-data-structure
+    - configstore-metadata
+    - configstore-vs-environment-variables
+    - environment-variables
+    - levels-of-configstore
+    - namespaces
+    - overview
+    - prepress-product-heading
+    - serviceyml-placeholder
+  continuous_deployment:
+    page: prepress/how-to-guides/deployment/continuous-deployment.html
+    page_anchors:
+    - continuous-deployment-via-redeployment-hooks
+    - continuous-integration-tests
+    - enabling-automated-continuous-deployment
+    - overview
+    - prepress-product-heading
+    - via-the-cloud-66-api
   data_protection:
     page: prepress/policies-specifications/data-protection.html
     page_anchors:
@@ -4046,6 +4154,7 @@ prepress:
     - auto-generate-variables
     - default-env-vars
     - prepress-product-heading
+    - referencing-env-vars-in-manifest-files
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -4058,9 +4167,9 @@ prepress:
     - how-much-does-it-cost
     - prepress-product-heading
     - what-is-cloud-66
-    - where-is-it-hosted
+    - where-is-cloud-66-hosted
     - which-clouds-are-supported
-    - who-pays-for-the-servers
+    - who-pays-for-the-cloud-storage
   framework_support:
     page: prepress/references/framework-support.html
     page_anchors:
@@ -4072,17 +4181,17 @@ prepress:
   getting_started:
     page: prepress/quickstarts/getting-started.html
     page_anchors:
-    - 1-choose-your-application-type
-    - 2-access-your-git-repo
-    - 3-define-your-application
-    - 4-configuring-your-application
-    - 5-choosing-a-deployment-target
-    - 6-deploy-your-app
-    - bitbucket-content
+    - 1-connect-your-git-repo
+    - 2-define-your-application
+    - 3-configuring-your-application
+    - 4-adding-a-cloud-provider
+    - 5-deploy-your-app
+    - a-set-up-your-cloud-provider
+    - b-add-your-cloud-provider-to-cloud-66
     - github-content
     - other-git-content
     - prepress-product-heading
-    - setting-up-cloud--access-keys-on-aws-s3
+    - using-a-non-github-host
     - what-youll-need
     - whats-next
   getting_started_with_manifest:
@@ -4095,9 +4204,15 @@ prepress:
     - what-is-a-manifest-file
     - what-youll-need
     - whats-next
+    - yaml-sample-docusaurus-v1--v2
     - yaml-sample-gatsby
     - yaml-sample-hugo
     - yaml-sample-jekyll
+    - yaml-sample-middleman
+    - yaml-sample-nextjs
+    - yaml-sample-nuxtjs
+    - yaml-sample-svelte
+    - yaml-sample-vuejs
   global_search:
     page: prepress/how-to-guides/common-tools/global-search.html
     page_anchors:
@@ -4128,6 +4243,17 @@ prepress:
     page: prepress/how-to-guides/index.html
     page_anchors:
     - prepress-product-heading
+  import_netlify:
+    page: prepress/quickstarts/import-netlify.html
+    page_anchors:
+    - 1-build-and-deploy-your-code
+    - 2-check-your-traffic-rules
+    - 3-update-your-dns
+    - cloud-providers-supported
+    - overview
+    - prepress-product-heading
+    - what-youll-need
+    - whats-next
   index:
     page: prepress/index.html
     page_anchors:
@@ -4179,10 +4305,13 @@ prepress:
   prepress_dns:
     page: prepress/tutorials/prepress-dns.html
     page_anchors:
+    - editing-your-custom-domain
     - note
     - overview
     - prepress-product-heading
     - setting-up-a-custom-domain
+    - stage-1-add-a-cname-to-your-dns-records
+    - stage-2-enable-your-custom-domain
     - what-youll-need
     - whats-next
   preview_deployments:
@@ -4282,7 +4411,6 @@ prepress:
   technical_specifications:
     page: prepress/policies-specifications/technical-specifications.html
     page_anchors:
-    - operating-system
     - prepress-product-heading
     - supported-cloud-providers
     - supported-platforms
@@ -4290,6 +4418,21 @@ prepress:
     page: prepress/the-basics/index.html
     page_anchors:
     - prepress-product-heading
+  traffic_cel_functions:
+    page: prepress/references/traffic-cel-functions.html
+    page_anchors:
+    - charat
+    - indexof
+    - lastindexof
+    - lowerascii
+    - overview
+    - prepress-product-heading
+    - replace
+    - split
+    - string-functions
+    - substring
+    - trim
+    - upperascii
   tutorials_index:
     page: prepress/tutorials/index.html
     page_anchors:
@@ -4311,13 +4454,37 @@ prepress:
     - glob-syntax
     - prepress-product-heading
     - what-is-a-glob
-  using_maintenance_mode:
-    page: prepress/how-to-guides/common-tools/using-maintenance-mode.html
+  understanding_traffic_rules:
+    page: prepress/references/understanding-traffic-rules.html
     page_anchors:
+    - block-rule-format-and-parameters
+    - block-rules
+    - examples-of-block-rules
+    - examples-of-header-rules
+    - examples-of-redirect-rules
+    - examples-of-rewrite-rules
+    - examples-of-traffic-types
+    - header-rule-format-and-parameters
+    - header-rules
     - overview
     - prepress-product-heading
-    - setting-a-custom-maintenance-page
-    - using-maintenance-mode
+    - redirect-rule-format-and-parameters
+    - redirect-rules
+    - rewrite-rule-format-and-parameters
+    - rewrite-rules
+    - traffic-and-cel-grammar
+  using_traffic_rules_to_route_traffic:
+    page: prepress/how-to-guides/deployment/using-traffic-rules-to-route-traffic.html
+    page_anchors:
+    - creating-and-managing-rules
+    - debugging-and-rule-construction
+    - how-traffic-rules-work
+    - overview
+    - performance
+    - prepress-product-heading
+    - references-for-rule-types
+    - testing-traffic-with-real-payloads
+    - whats-next
   what_is_prepress:
     page: prepress/the-basics/what-is-prepress.html
     page_anchors:
@@ -4332,14 +4499,19 @@ rails:
   access_your_code:
     page: rails/how-to-guides/common-tools/access-your-code.html
     page_anchors:
+    - adding-or-updating-github-accounts
     - bitbucket-example
-    - github-example
+    - deploying-manually-configured-github-repos
+    - manually-configuring-github-access
+    - other-private-repositories
     - other-public-repos
-    - private-repositories
+    - overview
+    - private-github-repositories
     - public-github-repos
     - public-repositories
     - querying-git-hashes
     - rails-product-heading
+    - working-with-multiple-github-accounts
   account_index:
     page: rails/account/index.html
     page_anchors:
@@ -4388,12 +4560,20 @@ rails:
     page: rails/how-to-guides/security/application-health-checks.html
     page_anchors:
     - configuring-a-post-deployment-check
-    - how-the-tests-work
+    - configuring-web-success-checks
+    - dealing-with-domain-access-controls
+    - deployment-success-checks
+    - global-availability-checks
+    - how-availability-tests-work
+    - load-balancer-health-checks
     - overview
-    - post-deployment-health-checks
+    - post-deployment-global-availability-checks
+    - process-success-checks
     - rails-product-heading
-    - running-an-on-demand-health-check
+    - running-an-on-demand-check
+    - the-limitations-of-web-success-checks
     - viewing-results-of-post-deployment-checks
+    - web-success-checks
   application_protection:
     page: rails/how-to-guides/common-tools/application-protection.html
     page_anchors:
@@ -4566,10 +4746,10 @@ rails:
   cloud_azure:
     page: rails/how-to-guides/clouds/cloud-azure.html
     page_anchors:
+    - azure-legacy-cloud
     - cloud-66-tag-propagation
     - generating-a-management-certificate
     - generating-credentials-for-azure-cloud
-    - microsoft-azure-legacy
     - rails-product-heading
     - using-your-management-certificate
   cloud_clouda:
@@ -4583,7 +4763,6 @@ rails:
     - authorise-cloud-66-with-digitalocean
     - bring-your-own-images-byoi
     - cloud-66-tag-propagation
-    - external-links
     - rails-product-heading
     - upgrading-account-keys
   cloud_gce:
@@ -4680,6 +4859,20 @@ rails:
     - rails-product-heading
     - via-ssh
     - with-a-client
+  continuous_deployment:
+    page: rails/how-to-guides/deployment/continuous-deployment.html
+    page_anchors:
+    - arguments
+    - continuous-deployment-via-redeployment-hooks
+    - continuous-deployment-via-the-cloud-66-toolbelt
+    - continuous-integration-tests
+    - enabling-automated-continuous-deployment
+    - examples
+    - overview
+    - rails-product-heading
+    - the-cx-redeploy-command
+    - usage
+    - via-the-cloud-66-api
   custom_config:
     page: rails/tutorials/custom-config.html
     page_anchors:
@@ -4849,18 +5042,6 @@ rails:
     - adding-servers-behind-an-on-premises-gateway
     - how-to-deploy-your-application-behind-a-gateway-server
     - rails-product-heading
-  deployment_health_checks:
-    page: rails/how-to-guides/deployment/deployment-health-checks.html
-    page_anchors:
-    - automated-health-checks
-    - custom-health-checks
-    - dealing-with-domain-access-controls
-    - defining-custom-health-checks
-    - enabling-automated-health-checks
-    - need-more-detail
-    - overview
-    - rails-product-heading
-    - the-limitations-of-health-checks
   deployment_history:
     page: rails/how-to-guides/deployment/deployment-history.html
     page_anchors:
@@ -4917,6 +5098,7 @@ rails:
     - managing-environment-variables-using-toolbelt
     - pre-defined-environment-variables
     - rails-product-heading
+    - referencing-env-vars-in-manifest-files
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -4946,7 +5128,7 @@ rails:
     - how-much-does-it-cost
     - rails-product-heading
     - what-is-cloud-66
-    - where-is-it-hosted
+    - where-is-cloud-66-hosted
     - which-clouds-are-supported
     - which-distributions-of-linux-are-supported
     - who-pays-for-the-servers
@@ -5314,13 +5496,14 @@ rails:
     page: rails/references/manifest-web-settings.html
     page_anchors:
     - cors-configuration
+    - deployment-success-checks
     - example-yaml-for-bundle-install-options-in-rails
+    - example-yaml-for-deployment-success-checks
     - example-yaml-for-gateway
     - example-yaml-for-nginx
-    - example-yaml-for-post-deployment-health-check
+    - example-yaml-for-post-deployment-global-availability-checks
     - example-yaml-for-rack
     - example-yaml-for-rails
-    - example-yaml-for-rails-health-checks
     - examples-of-bundle-install-options-railsrack
     - gateway
     - key-to-table-headings
@@ -5328,11 +5511,10 @@ rails:
     - nginx
     - node-version-for-rails-applications
     - overview
-    - post-deployment-health-checks
+    - post-deployment-availability-checks
     - rack
     - rails
     - rails-product-heading
-    - rails-rack-deployment-health-checks
     - sinatra
   memcached:
     page: rails/how-to-guides/add-ins/memcached.html
@@ -6610,7 +6792,7 @@ skycap:
     - how-much-does-it-cost
     - skycap-product-heading
     - what-is-cloud-66
-    - where-is-it-hosted
+    - where-is-cloud-66-hosted
     - which-clouds-are-supported
     - which-distributions-of-linux-are-supported
     - who-pays-for-the-servers
@@ -6644,7 +6826,6 @@ skycap:
     page: skycap/quickstarts/getting-started.html
     page_anchors:
     - adding-services
-    - choosing-application-type
     - deploying-your-application
     - skycap-product-heading
     - snapshots-and-building-images

@@ -1,19 +1,22 @@
-
+{% if include.product != 'prepress' %}
 ## Operating system
 
 Your servers are deployed with **Ubuntu 20.04 LTS**.
+{%endif%}
 
 ## Supported cloud providers
 
-Cloud 66 currently supports the following cloud providers:
-* [Amazon Web Services](/{{page.collection}}/how-to-guides/clouds/cloud-aws.html){% if include.product != 'prepress' %}
+{% if include.product != 'prepress' %}Cloud 66 currently supports the following cloud providers:{%endif%}
+{% if include.product == 'prepress' %}Prepress currently supports the following cloud providers:{%endif%}
+
+* [Amazon Web Services](/{{page.collection}}/how-to-guides/clouds/cloud-aws.html)
 * [Digital Ocean](/{{page.collection}}/how-to-guides/clouds/cloud-do.html)
-* [Google Compute Engine](/{{page.collection}}/how-to-guides/clouds/cloud-gce.html)
-* [Hetzner Cloud](/{{page.collection}}/how-to-guides/clouds/cloud-hetzner.html){%endif%}{% if include.product != 'maestro' and include.product != 'prepress' %}
+* [Google Compute Engine](/{{page.collection}}/how-to-guides/clouds/cloud-gce.html){% if include.product != 'prepress' %}
+* [Hetzner Cloud](/{{page.collection}}/how-to-guides/clouds/cloud-hetzner.html){%endif%}{% if include.product != 'maestro' %}
 * [Linode](/{{page.collection}}/how-to-guides/clouds/cloud-linode.html){%endif%}{% if include.product != 'prepress' %}
 * [Maxihost](/{{page.collection}}/how-to-guides/clouds/cloud-maxihost.html)
-* [OVHcloud](/{{page.collection}}/how-to-guides/clouds/cloud-ovh.html)
-* [Microsoft Azure](/{{page.collection}}/how-to-guides/clouds/cloud-azure.html)
+* [OVHcloud](/{{page.collection}}/how-to-guides/clouds/cloud-ovh.html){%endif%}
+* [Microsoft Azure](/{{page.collection}}/how-to-guides/clouds/cloud-azure.html){% if include.product != 'prepress' %}
 * [Rackspace](/{{page.collection}}/how-to-guides/clouds/cloud-rackspace.html)
 * [Vultr](/{{page.collection}}/how-to-guides/clouds/cloud-vultr.html){% endif %}
 
@@ -52,24 +55,23 @@ You are free to **specify an alternative version** for most of these components 
 <th width="30%">Component</th>
 <th>Default version</th></thead>
 
-<tr><td>Docker</td><td>20.10.8-ce (as per Kubernetes guidelines)</td></tr>
+<tr><td>Docker</td><td>20.10.x</td></tr>
 <tr><td>ElasticSearch</td><td>7.16.1</td></tr>
 <tr><td>GlusterFS</td><td>8.5</td></tr>
 <tr><td>Gotty</td><td>1.0.0</td></tr>
-<tr><td>Kubernetes</td><td>1.21.5</td></tr>
+<tr><td>Kubernetes</td><td>1.22.x</td></tr>
 <tr><td>MongoDB</td><td>4.4.x</td></tr>
 <tr><td>MySQL</td><td>8.0</td></tr>
 <tr><td>Nginx</td><td>We deploy a custom release of Nginx. <a href="#nginx-release">See below</a> for details.</td></tr>
-<tr><td>Phusion Passenger</td><td>6.0.9</td></tr>
-<tr><td>Passenger Enterprise</td><td>6.0.9</td></tr>
+<tr><td>Phusion Passenger</td><td>6.0.10</td></tr>
+<tr><td>Passenger Enterprise</td><td>6.0.10</td></tr>
 <tr><td>PostGIS</td><td>3.1</td></tr>
-<tr><td>PostgreSQL</td><td>13</td></tr>
+<tr><td>PostgreSQL</td><td>14</td></tr>
 <tr><td>Rails*</td><td>All versions from 2.6.3 and up</td></tr>
-<tr><td>Redis</td><td>6.2.5</td></tr>
+<tr><td>Redis</td><td>6.2.6</td></tr>
 <tr><td>Ruby</td><td>3.1.1</td></tr>
 <tr><td>Stack</td><td>1.4.8</td></tr>
 <tr><td>Weave</td><td>2.6.2</td></tr>
-<tr><td>White Rabbit (client)</td><td>0.1.5</td></tr>
 </table>
 
 \* We **don't** install a default version of Rails - the version installed is based on the requirements of your application. Versions earlier than 2.6.3 *may* work but have some compatibility issues with Ubuntu 18.04 and 20.04.
