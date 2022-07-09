@@ -22,7 +22,7 @@ Horizontal scaling works differently for each server type and is only available 
 
 From your Application Overview, click on the `Servers` tab to take you to your server groups page. To add a Kubernetes server, click the `+` sign in the top right corner of the server group, select your desired server size and quantity, and click Add. Your new server(s) will automatically be added to the cluster after they have completed provisioning and deployment, ready to serve traffic.
 
-If you are using AWS, you will also have the option to scale your servers to different [Availability Zones](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) within your region using the `more option` tab in the over-lay form.
+If you are using AWS, you will also have the option to scale your servers to different [Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) within your region using the `more option` tab in the over-lay form.
 
 You can also scale down your servers. From your Application Overview, click on the `Servers` tab to take you to your server groups page, and click the `X` icon next to the server you would like to scale down. This server will automatically be removed from your load balancer, and shutdown, but you will need to delete it from your cloud provider. 
 
@@ -45,7 +45,7 @@ If you need to scale multiple services simultaneously:
 1. Follow steps 1 to 4 above for each of the services 
 2. Click the green *Apply* button in the yellow bar above the **Services** panel to apply all your service changes to your cluster
 
-![How to scale services in the dashboard](/assets/maestro/scale-services.gif)
+![How to scale services in the dashboard](/assets/maestro/scale-services.gif "Scaling services in dashboard")
 
 ### Scaling services with Toolbelt (cx)
 

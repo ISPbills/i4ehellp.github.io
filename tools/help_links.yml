@@ -319,7 +319,6 @@ maestro:
     page: maestro/how-to-guides/clouds/cloud-rackspace.html
     page_anchors:
     - add-rackspace-key-to-an-application
-    - external-links
     - generate-a-rackspace-api-key
     - maestro-product-heading
     - note
@@ -561,7 +560,7 @@ maestro:
     - note
     - note-1
     - overview
-    - re-synchronizing-slave-with-master
+    - re-synchronizing-replica-with-master
     - single-application
   deploy_hooks:
     page: maestro/tutorials/deploy-hooks.html
@@ -1488,7 +1487,6 @@ maestro:
   remove_passphrase:
     page: maestro/how-to-guides/security/remove-passphrase.html
     page_anchors:
-    - acknowledgement
     - maestro-product-heading
     - overview
     - removing-a-passphrase-using-openssl
@@ -1505,6 +1503,17 @@ maestro:
     page: maestro/resources/index.html
     page_anchors:
     - maestro-product-heading
+  running_toolbelt_inside_docker:
+    page: maestro/references/toolbelt/running-toolbelt-inside-docker.html
+    page_anchors:
+    - how-to-set-up-toolbelt-in-docker
+    - maestro-product-heading
+    - overview
+    - step-1-start-an-ubuntu-container
+    - step-2-install-requireduseful-tools
+    - step-3-create-some-default-folders
+    - step-4-install-toolbelt
+    - step-5-register-toolbelt
   scaling:
     page: maestro/how-to-guides/scaling/scaling.html
     page_anchors:
@@ -1586,6 +1595,19 @@ maestro:
     - maestro-product-heading
     - overview
     - restart-criteria
+  server_warning_no_communication:
+    page: maestro/references/server-warning-no-communication.html
+    page_anchors:
+    - are-there-any-network-connectivity-problems
+    - i-have-none-of-these-problems-but-i-still-see-this-message
+    - is-cloud-66-down
+    - is-the-server-down
+    - is-the-server-unresponsive-due-to-high-load
+    - is-your-cloud-provider-down
+    - maestro-product-heading
+    - overview
+    - what-does-the-error-mean
+    - why-has-my-server-lost-communication-with-cloud-66
   service_accounts:
     page: maestro/account/service-accounts.html
     page_anchors:
@@ -1878,8 +1900,8 @@ maestro:
     - containers-list
     - containers-restart
     - containers-stop
-    - databases-promote-slave
-    - databases-resync-slave
+    - databases-promote-replica
+    - databases-resync-replica
     - download
     - dump-token
     - env-vars-download
@@ -1975,6 +1997,7 @@ maestro:
     - installing-on-a-server-headless
     - maestro-product-heading
     - multi-account-support
+    - running-toolbelt-inside-a-docker-container
   toolbelt_profiles:
     page: maestro/references/toolbelt/toolbelt-profiles.html
     page_anchors:
@@ -2023,6 +2046,7 @@ maestro:
     - logging-in-with-2fa
     - maestro-product-heading
     - troubleshooting
+    - using-mac-touch-id-as-a-physical-key
     - what-is-two-factor-authentication
   understanding_and_improving_security_score:
     page: maestro/account/understanding-and-improving-security-score.html
@@ -2470,7 +2494,6 @@ node:
     page: node/how-to-guides/clouds/cloud-rackspace.html
     page_anchors:
     - add-rackspace-key-to-an-application
-    - external-links
     - generate-a-rackspace-api-key
     - node-product-heading
     - note
@@ -2644,7 +2667,7 @@ node:
     - note
     - note-1
     - overview
-    - re-synchronizing-slave-with-master
+    - re-synchronizing-replica-with-master
     - single-application
   deploy_hooks:
     page: node/tutorials/deploy-hooks.html
@@ -3344,6 +3367,17 @@ node:
     page: node/resources/index.html
     page_anchors:
     - node-product-heading
+  running_toolbelt_inside_docker:
+    page: node/references/toolbelt/running-toolbelt-inside-docker.html
+    page_anchors:
+    - how-to-set-up-toolbelt-in-docker
+    - node-product-heading
+    - overview
+    - step-1-start-an-ubuntu-container
+    - step-2-install-requireduseful-tools
+    - step-3-create-some-default-folders
+    - step-4-install-toolbelt
+    - step-5-register-toolbelt
   scale_node:
     page: node/how-to-guides/scaling/scale-node.html
     page_anchors:
@@ -3435,6 +3469,19 @@ node:
     - is-this-important-do-i-need-immediate-action
     - ive-restarted-but-i-still-see-the-notification
     - node-product-heading
+  server_warning_no_communication:
+    page: node/references/server-warning-no-communication.html
+    page_anchors:
+    - are-there-any-network-connectivity-problems
+    - i-have-none-of-these-problems-but-i-still-see-this-message
+    - is-cloud-66-down
+    - is-the-server-down
+    - is-the-server-unresponsive-due-to-high-load
+    - is-your-cloud-provider-down
+    - node-product-heading
+    - overview
+    - what-does-the-error-mean
+    - why-has-my-server-lost-communication-with-cloud-66
   service_accounts:
     page: node/account/service-accounts.html
     page_anchors:
@@ -3672,8 +3719,8 @@ node:
     - containers-list
     - containers-restart
     - containers-stop
-    - databases-promote-slave
-    - databases-resync-slave
+    - databases-promote-replica
+    - databases-resync-replica
     - download
     - dump-token
     - env-vars-download
@@ -3769,6 +3816,7 @@ node:
     - installing-on-a-server-headless
     - multi-account-support
     - node-product-heading
+    - running-toolbelt-inside-a-docker-container
   toolbelt_profiles:
     page: node/references/toolbelt/toolbelt-profiles.html
     page_anchors:
@@ -3815,6 +3863,7 @@ node:
     - logging-in-with-2fa
     - node-product-heading
     - troubleshooting
+    - using-mac-touch-id-as-a-physical-key
     - what-is-two-factor-authentication
   understanding_and_improving_security_score:
     page: node/account/understanding-and-improving-security-score.html
@@ -4305,6 +4354,9 @@ prepress:
   prepress_dns:
     page: prepress/tutorials/prepress-dns.html
     page_anchors:
+    - adding-a-subdomain-record
+    - adding-an-apex-record
+    - adding-multiple-custom-domains
     - editing-your-custom-domain
     - note
     - overview
@@ -4447,6 +4499,7 @@ prepress:
     - logging-in-with-2fa
     - prepress-product-heading
     - troubleshooting
+    - using-mac-touch-id-as-a-physical-key
     - what-is-two-factor-authentication
   understanding_globs:
     page: prepress/how-to-guides/common-tools/understanding-globs.html
@@ -4813,7 +4866,6 @@ rails:
     page: rails/how-to-guides/clouds/cloud-rackspace.html
     page_anchors:
     - add-rackspace-key-to-an-application
-    - external-links
     - generate-a-rackspace-api-key
     - note
     - rails-product-heading
@@ -4996,7 +5048,7 @@ rails:
     - note-1
     - overview
     - rails-product-heading
-    - re-synchronizing-slave-with-master
+    - re-synchronizing-replica-with-master
     - single-application
   deploy_hooks:
     page: rails/tutorials/deploy-hooks.html
@@ -5925,6 +5977,17 @@ rails:
     - rails-product-heading
     - scheduling-rake-tasks
     - using-deploy-hooks
+  running_toolbelt_inside_docker:
+    page: rails/references/toolbelt/running-toolbelt-inside-docker.html
+    page_anchors:
+    - how-to-set-up-toolbelt-in-docker
+    - overview
+    - rails-product-heading
+    - step-1-start-an-ubuntu-container
+    - step-2-install-requireduseful-tools
+    - step-3-create-some-default-folders
+    - step-4-install-toolbelt
+    - step-5-register-toolbelt
   scaling:
     page: rails/how-to-guides/scaling/scaling.html
     page_anchors:
@@ -6013,6 +6076,19 @@ rails:
     - is-this-important-do-i-need-immediate-action
     - ive-restarted-but-i-still-see-the-notification
     - rails-product-heading
+  server_warning_no_communication:
+    page: rails/references/server-warning-no-communication.html
+    page_anchors:
+    - are-there-any-network-connectivity-problems
+    - i-have-none-of-these-problems-but-i-still-see-this-message
+    - is-cloud-66-down
+    - is-the-server-down
+    - is-the-server-unresponsive-due-to-high-load
+    - is-your-cloud-provider-down
+    - overview
+    - rails-product-heading
+    - what-does-the-error-mean
+    - why-has-my-server-lost-communication-with-cloud-66
   service_accounts:
     page: rails/account/service-accounts.html
     page_anchors:
@@ -6287,8 +6363,8 @@ rails:
     - containers-list
     - containers-restart
     - containers-stop
-    - databases-promote-slave
-    - databases-resync-slave
+    - databases-promote-replica
+    - databases-resync-replica
     - download
     - dump-token
     - env-vars-download
@@ -6384,6 +6460,7 @@ rails:
     - installing-on-a-server-headless
     - multi-account-support
     - rails-product-heading
+    - running-toolbelt-inside-a-docker-container
   toolbelt_profiles:
     page: rails/references/toolbelt/toolbelt-profiles.html
     page_anchors:
@@ -6442,6 +6519,7 @@ rails:
     - logging-in-with-2fa
     - rails-product-heading
     - troubleshooting
+    - using-mac-touch-id-as-a-physical-key
     - what-is-two-factor-authentication
   understanding_and_improving_security_score:
     page: rails/account/understanding-and-improving-security-score.html
@@ -6586,14 +6664,11 @@ rails:
   websocket_support:
     page: rails/how-to-guides/deployment/websocket-support.html
     page_anchors:
-    - configuring-for-websocket
+    - configuring-your-app-for-action-cable
+    - custom-application-server-configuration
+    - default-application-server-configuration
     - overview
     - rails-product-heading
-    - testing-a-websocket-connection
-    - using-custom-ports-for-websocket
-    - using-websocket-via-haproxy
-    - using-websocket-via-native-cloud-load-balancers
-    - websocket-through-a-load-balancer
   zapier:
     page: rails/how-to-guides/automation/zapier.html
     page_anchors:
@@ -7081,6 +7156,17 @@ skycap:
     - see-more-detailed-logs
     - skycap-product-heading
     - whats-next
+  running_toolbelt_inside_docker:
+    page: skycap/references/toolbelt/running-toolbelt-inside-docker.html
+    page_anchors:
+    - how-to-set-up-toolbelt-in-docker
+    - overview
+    - skycap-product-heading
+    - step-1-start-an-ubuntu-container
+    - step-2-install-requireduseful-tools
+    - step-3-create-some-default-folders
+    - step-4-install-toolbelt
+    - step-5-register-toolbelt
   security:
     page: skycap/policies-specifications/security.html
     page_anchors:
@@ -7208,8 +7294,8 @@ skycap:
     - containers-list
     - containers-restart
     - containers-stop
-    - databases-promote-slave
-    - databases-resync-slave
+    - databases-promote-replica
+    - databases-resync-replica
     - download
     - dump-token
     - env-vars-download
@@ -7304,6 +7390,7 @@ skycap:
     - installation
     - installing-on-a-server-headless
     - multi-account-support
+    - running-toolbelt-inside-a-docker-container
     - skycap-product-heading
   toolbelt_profiles:
     page: skycap/references/toolbelt/toolbelt-profiles.html
@@ -7341,6 +7428,7 @@ skycap:
     - logging-in-with-2fa
     - skycap-product-heading
     - troubleshooting
+    - using-mac-touch-id-as-a-physical-key
     - what-is-two-factor-authentication
   understanding_and_improving_security_score:
     page: skycap/account/understanding-and-improving-security-score.html

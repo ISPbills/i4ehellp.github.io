@@ -16,7 +16,7 @@ Transformations allow you to automatically modify configuration files based on c
 
 Transformations can make a wide range of changes to configuration files, but they are most useful for systematising additions or changes that need to be applied to multiple different configuration files each time you set up or deploy an application. Transformations save you from repetitive, manual editing of files and all the risks and issues associated with that practice. 
 
-Skycap Transformations are based on [Alterant](https://www.cloud66.com/alterant), our open-source Descriptive Configuration Modifier project. 
+Skycap Transformations are based on [Alterant](https://github.com/cloud66-oss/alterant), our open-source Descriptive Configuration Modifier project. 
 
 ## What you’ll need
 
@@ -83,7 +83,6 @@ You can change the execution order of Transformations by dragging and dropping t
 
 ## What’s next?
 
-- The [full documentation](https://help.cloud66.com/alterant/) for Alterant
 - A guide to adding Transformations to [Base Template Repositories](/skycap/how-to-guides/formations/adding-transformations-to-btrs.html)
 - Learn how to add **[custom environment variables](/skycap/tutorials/setting-environment-variables.html)** to your application.
 - Learn how to use your **[Habitus build flow](/skycap/tutorials/using-habitus-with-skycap.html)** within Skycap.

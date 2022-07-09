@@ -1,4 +1,20 @@
 [[redirects]]
+  from = "/habitus/*"
+  to = "https://www.habitus.io/"
+
+[[redirects]]
+  from = "/starter/*"
+  to = "https://github.com/cloud66-oss/starter"
+
+[[redirects]]
+  from = "/copper/*"
+  to = "https://github.com/cloud66-oss/copper"
+
+[[redirects]]
+  from = "/opensource/*"
+  to = "/"
+
+[[redirects]]
   from = "/maestro/references/connect-cloud66-to-git-repo.html"
   to = "/maestro/how-to-guides/common-tools/access-your-code.html"
 
@@ -809,10 +825,6 @@
 [[redirects]]
   from = "/category/toolbelt"
   to = "/"
-
-[[redirects]]
-  from = "/copper/faq.hmtl"
-  to = "/copper/faq.html"
 
 [[redirects]]
   from = "/how-to-guides"

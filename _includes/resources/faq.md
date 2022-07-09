@@ -20,7 +20,7 @@ Cloud 66 is hosted in the cloud and is available as a service. You don't need to
 
 ## How can I use Cloud 66?
 
-[Sign up](http://app.cloud66.com/users/sign_up) for an account and start by building your first application. Specify a Git repository containing your application code, or provide a Docker image. A few seconds later you can configure your deployment and point your application to the infrastructure on which you would like it run.
+[Sign up](https://app.cloud66.com/users/sign_up) for an account and start by building your first application. Specify a Git repository containing your application code, or provide a Docker image. A few seconds later you can configure your deployment and point your application to the infrastructure on which you would like it run.
 
 * * *
 
@@ -79,32 +79,16 @@ Currently Prepress supports AWS (S3), Google Compute Engine, DigitalOcean Spaces
 {% if include.product != 'prepress' %}
 ## Which distributions of Linux are supported?
 
-We currently support Ubuntu versions 16.04 and 18.04.
+We currently support Ubuntu versions 18.04 and 20.04.
 
 * * *
+
 {% endif %}
 
 ## How much does it cost?
 
-{% if include.product == 'rails' %}
-Please see our [product page](https://www.cloud66.com/rails) for more information.
-{% endif %}
+Please see our [main site](https://www.cloud66.com/) for more information.
 
-{% if include.product == 'maestro' %}
-Please see our [product page](https://www.cloud66.com/containers/maestro) for more information.
-{% endif %}
-
-{% if include.product == 'prepress' %}
-Please see our [product page](https://www.cloud66.com/frameworks/jamstack) for more information.
-{% endif %}
-
-{% if include.product == 'node' %}
-Please see our [product page](https://www.cloud66.com/node) for more information.
-{% endif %}
-
-{% if include.product == 'skycap' %}
-Please see our [product page](https://www.cloud66.com/containers/skycap) for more information.
-{% endif %}
 
 * * *
 
@@ -115,6 +99,7 @@ You do. Cloud 66 helps you with configuring and deploying your application to th
 {% endif %}
 {% if include.product == 'prepress' %}
 ## Who pays for the cloud storage?
+
 You do. Cloud 66 helps you with configuring and deploying your application to your cloud provider.
 {% endif %}
 
