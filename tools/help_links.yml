@@ -293,6 +293,7 @@ maestro:
     page_anchors:
     - cloud-66-tag-propagation
     - external-links
+    - hetzner-virtual-private-cloud
     - how-to-add-your-hetzner-api-key-to-cloud-66
     - maestro-product-heading
     - support-for-older-versions-of-ubuntu
@@ -300,7 +301,7 @@ maestro:
   cloud_maxihost:
     page: maestro/how-to-guides/clouds/cloud-maxihost.html
     page_anchors:
-    - how-to-add-your-maxihost-api-key-to-cloud-66
+    - how-to-add-your-latitudesh-api-key-to-cloud-66
     - maestro-product-heading
     - support-for-older-versions-of-ubuntu
   cloud_ovh:
@@ -608,10 +609,7 @@ maestro:
   deployment_gateway:
     page: maestro/how-to-guides/deployment/deployment-gateway.html
     page_anchors:
-    - about-deployment-gateways
-    - accessing-servers-behind-a-gateway
-    - deploying-an-application-behind-a-gateway
-    - important
+    - deployment-gateways-not-supported
     - maestro-product-heading
   deployment_history:
     page: maestro/how-to-guides/deployment/deployment-history.html
@@ -660,9 +658,26 @@ maestro:
     - overview
     - passing-parameters-to-a-job
     - using-parameters
+  dockerfile_for_django:
+    page: maestro/how-to-guides/dockerfiles/dockerfile-for-django.html
+    page_anchors:
+    - adding-a-dockerfile-to-your-repo
+    - maestro-product-heading
+    - overview
+    - writing-a-custom-dockerfile-for-django
+    - writing-your-own-dockerfile
+  dockerfile_for_express:
+    page: maestro/how-to-guides/dockerfiles/dockerfile-for-express.html
+    page_anchors:
+    - adding-a-dockerfile-to-your-repo
+    - maestro-product-heading
+    - overview
+    - writing-a-custom-dockerfile-for-express
+    - writing-your-own-dockerfile
   dockerfile_for_node:
     page: maestro/how-to-guides/dockerfiles/dockerfile-for-node.html
     page_anchors:
+    - adding-a-dockerfile-to-your-repo
     - default-nodejs-dockerfile
     - maestro-product-heading
     - overview
@@ -670,6 +685,7 @@ maestro:
   dockerfile_for_php:
     page: maestro/how-to-guides/dockerfiles/dockerfile-for-php.html
     page_anchors:
+    - adding-a-dockerfile-to-your-repo
     - default-php-dockerfile
     - maestro-product-heading
     - overview
@@ -677,6 +693,7 @@ maestro:
   dockerfile_for_ruby:
     page: maestro/how-to-guides/dockerfiles/dockerfile-for-ruby.html
     page_anchors:
+    - adding-a-dockerfile-to-your-repo
     - default-rails-dockerfile
     - maestro-product-heading
     - overview
@@ -698,6 +715,7 @@ maestro:
     page_anchors:
     - general-recommendations
     - maestro-product-heading
+    - resizing-elasticsearch-servers
   env_vars:
     page: maestro/tutorials/env-vars.html
     page_anchors:
@@ -728,6 +746,7 @@ maestro:
     - overview
     - pre-defined-environment-variables
     - rb-files
+    - referencing-env-vars-in-serviceyml-commands
     - referencing-existing-variables
     - syntax-examples
     - using-auto-generate
@@ -938,6 +957,7 @@ maestro:
   image_repository:
     page: maestro/how-to-guides/build-and-config/image-repository.html
     page_anchors:
+    - connecting-to-google-image-registries
     - connecting-to-private-repositories
     - connecting-to-public-repositories
     - maestro-product-heading
@@ -1054,16 +1074,6 @@ maestro:
     - restoring-a-redis-backup
     - restoring-an-automated-backup
     - unarchive-the-backup-files
-  manage_stacks_chatops:
-    page: maestro/how-to-guides/deployment/manage-stacks-chatops.html
-    page_anchors:
-    - cloud-66-chatops
-    - create-a-slack-bot
-    - deregister
-    - download-igor
-    - for-more-information-on-how-to-use-igor
-    - maestro-product-heading
-    - quick-install
   managing_advanced_firewall_rules:
     page: maestro/how-to-guides/deployment/managing-advanced-firewall-rules.html
     page_anchors:
@@ -1132,6 +1142,7 @@ maestro:
     - example-yaml-for-rackspace-load-balancer
     - gce-load-balancer
     - haproxy
+    - hetzner-cloud-load-balancer
     - key-to-table-headings
     - linode-nodebalancer
     - maestro-product-heading
@@ -1158,11 +1169,9 @@ maestro:
     - cors-configuration
     - customizing-nginx-in-maestro
     - docker
-    - example-yaml-for-gateway
     - example-yaml-for-nginx
     - example-yaml-for-post-deployment-global-availability-checks
     - examples-yaml-for-docker
-    - gateway
     - key-to-table-headings
     - maestro-product-heading
     - more-on-manifest-files
@@ -1476,7 +1485,6 @@ maestro:
   registered_servers:
     page: maestro/how-to-guides/deployment/registered-servers.html
     page_anchors:
-    - adding-servers-behind-a-gateway
     - maestro-product-heading
     - overview
     - register-a-server
@@ -1562,7 +1570,6 @@ maestro:
     page_anchors:
     - aws
     - azure
-    - clouda
     - digitalocean
     - gce
     - linode
@@ -1595,6 +1602,21 @@ maestro:
     - maestro-product-heading
     - overview
     - restart-criteria
+  server_snapshots:
+    page: maestro/how-to-guides/deployment/server-snapshots.html
+    page_anchors:
+    - aws-ec2
+    - cost-implications
+    - digitalocean
+    - enabling-server-snapshots-at-account-level
+    - enabling-server-snapshots-per-application
+    - google-cloud
+    - hetzner-cloud
+    - how-server-snapshots-work
+    - how-to-enable-server-snapshots
+    - maestro-product-heading
+    - overview
+    - permissions-required
   server_warning_no_communication:
     page: maestro/references/server-warning-no-communication.html
     page_anchors:
@@ -1848,13 +1870,14 @@ maestro:
     - application-users
     - assigning-application-roles-to-a-user
     - creating-and-editing-roles
+    - creating-and-managing-groups
     - deleting-user-accounts--teams
     - finance-users
     - leave-a-team
     - maestro-product-heading
+    - overview
     - switch-organizations
     - user-roles-and-permissions
-    - using-team-accounts
   technical_specifications:
     page: maestro/resources/technical-specifications.html
     page_anchors:
@@ -1868,10 +1891,6 @@ maestro:
     - suggest-version-changes
     - supported-cloud-providers
     - supported-platforms
-  terminology:
-    page: maestro/resources/terminology.html
-    page_anchors:
-    - maestro-product-heading
   the_basics_index:
     page: maestro/the-basics/index.html
     page_anchors:
@@ -1913,17 +1932,6 @@ maestro:
     - failover-groups-delete
     - failover-groups-list
     - failover-groups-update
-    - formations-commit
-    - formations-create
-    - formations-deploy
-    - formations-fetch
-    - formations-list
-    - formations-stencils-list
-    - gateways-add
-    - gateways-close
-    - gateways-list
-    - gateways-open
-    - gateways-remove
     - help
     - info
     - init
@@ -1957,8 +1965,6 @@ maestro:
     - settings-list
     - settings-set
     - skycap-listen
-    - snapshots-list
-    - snapshots-render
     - ssh
     - stacks-clear-caches
     - stacks-configuration-apply
@@ -1978,9 +1984,6 @@ maestro:
     - tags-add
     - tags-delete
     - tail
-    - templates-list
-    - templates-resync
-    - templates-show
     - test
     - tunnel
     - update
@@ -2020,6 +2023,16 @@ maestro:
     - naming-shortcuts
     - running-cx-in-a-git-directory
     - shortcuts
+  troubleshooting_containers:
+    page: maestro/how-to-guides/deployment/troubleshooting-containers.html
+    page_anchors:
+    - checking-containers-via-command-line
+    - checking-containers-via-the-dashboard
+    - checking-the-status-of-your-containers
+    - maestro-product-heading
+    - overview
+    - troubleshooting-a-container-that-has-started
+    - troubleshooting-a-container-that-wont-start
   troubleshooting_server_connection:
     page: maestro/how-to-guides/deployment/troubleshooting-server-connection.html
     page_anchors:
@@ -2040,6 +2053,8 @@ maestro:
     page: maestro/account/two-factor-authentication.html
     page_anchors:
     - adding-a-physical-fido2-security-key
+    - advanced-protection-level
+    - changing-your-apl-settings
     - enabling-2fa-on-your-account
     - enforcing-2fa-for-your-team
     - if-youre-using-a-usb-based-device
@@ -2107,6 +2122,17 @@ maestro:
     page: maestro/how-to-guides/databases/shells/uninstall-mysql.html
     page_anchors:
     - maestro-product-heading
+  upgrading_cluster:
+    page: maestro/how-to-guides/build-and-config/upgrading-cluster.html
+    page_anchors:
+    - assess-your-current-server-capacity
+    - check-your-current-version
+    - maestro-product-heading
+    - overview
+    - update-your-manifest
+    - upgrade-your-cluster
+    - upgrading-with-downtime
+    - upgrading-your-cluster-without-downtime
   using_application_private_networks:
     page: maestro/how-to-guides/security/using-application-private-networks.html
     page_anchors:
@@ -2199,6 +2225,7 @@ maestro:
   writing_a_dockerfile:
     page: maestro/how-to-guides/dockerfiles/writing-a-dockerfile.html
     page_anchors:
+    - adding-a-dockerfile-to-your-repo
     - caching--build-speed
     - how-to-guides-by-framework
     - important-dockerfile-principles
@@ -2460,6 +2487,7 @@ node:
     page_anchors:
     - cloud-66-tag-propagation
     - external-links
+    - hetzner-virtual-private-cloud
     - how-to-add-your-hetzner-api-key-to-cloud-66
     - node-product-heading
     - support-for-older-versions-of-ubuntu
@@ -2475,7 +2503,7 @@ node:
   cloud_maxihost:
     page: node/how-to-guides/clouds/cloud-maxihost.html
     page_anchors:
-    - how-to-add-your-maxihost-api-key-to-cloud-66
+    - how-to-add-your-latitudesh-api-key-to-cloud-66
     - node-product-heading
     - support-for-older-versions-of-ubuntu
   cloud_ovh:
@@ -2698,10 +2726,7 @@ node:
   deployment_gateway:
     page: node/how-to-guides/deployment/deployment-gateway.html
     page_anchors:
-    - about-deployment-gateways
-    - accessing-your-servers-behind-the-gateway-server
-    - how-to-deploy-your-application-behind-the-gateway-server
-    - important
+    - deployment-gateways-not-supported
     - node-product-heading
   deployment_history:
     page: node/how-to-guides/deployment/deployment-history.html
@@ -2739,6 +2764,7 @@ node:
     page_anchors:
     - general-recommendations
     - node-product-heading
+    - resizing-elasticsearch-servers
   env_vars:
     page: node/tutorials/env-vars.html
     page_anchors:
@@ -2751,6 +2777,7 @@ node:
     - node-product-heading
     - pre-defined-environment-variables
     - referencing-env-vars-in-manifest-files
+    - referencing-env-vars-in-serviceyml-commands
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -3008,16 +3035,6 @@ node:
     - restoring-a-redis-backup
     - restoring-an-automated-backup
     - unarchive-the-backup-files
-  manage_stacks_chatops:
-    page: node/how-to-guides/common-tools/manage-stacks-chatops.html
-    page_anchors:
-    - cloud-66-chatops
-    - create-a-slack-bot
-    - deregister
-    - download-igor
-    - for-more-information-on-how-to-use-igor
-    - node-product-heading
-    - quick-install
   managing_advanced_firewall_rules:
     page: node/how-to-guides/deployment/managing-advanced-firewall-rules.html
     page_anchors:
@@ -3077,6 +3094,7 @@ node:
     - example-yaml-for-rackspace-load-balancer
     - gce-load-balancer
     - haproxy
+    - hetzner-cloud-load-balancer
     - key-to-table-headings
     - linode-nodebalancer
     - more-on-manifest-files
@@ -3101,10 +3119,8 @@ node:
     page: node/references/manifest-web-settings.html
     page_anchors:
     - cors-configuration
-    - example-yaml-for-gateway
     - example-yaml-for-nginx
     - example-yaml-for-post-deployment-global-availability-checks
-    - gateway
     - key-to-table-headings
     - more-on-manifest-files
     - nginx
@@ -3169,10 +3185,6 @@ node:
     - note
   multi_region_stack:
     page: node/how-to-guides/deployment/shells/multi-region-stack.html
-    page_anchors:
-    - node-product-heading
-  multi_tenancy:
-    page: node/how-to-guides/deployment/multi-tenancy.html
     page_anchors:
     - node-product-heading
   network_configuration:
@@ -3339,7 +3351,6 @@ node:
   registered_servers:
     page: node/how-to-guides/deployment/registered-servers.html
     page_anchors:
-    - adding-servers-behind-a-gateway
     - node-product-heading
     - overview
     - register-a-server
@@ -3437,7 +3448,6 @@ node:
     page_anchors:
     - aws
     - azure
-    - clouda
     - digitalocean
     - gce
     - linode
@@ -3469,6 +3479,21 @@ node:
     - is-this-important-do-i-need-immediate-action
     - ive-restarted-but-i-still-see-the-notification
     - node-product-heading
+  server_snapshots:
+    page: node/how-to-guides/deployment/server-snapshots.html
+    page_anchors:
+    - aws-ec2
+    - cost-implications
+    - digitalocean
+    - enabling-server-snapshots-at-account-level
+    - enabling-server-snapshots-per-application
+    - google-cloud
+    - hetzner-cloud
+    - how-server-snapshots-work
+    - how-to-enable-server-snapshots
+    - node-product-heading
+    - overview
+    - permissions-required
   server_warning_no_communication:
     page: node/references/server-warning-no-communication.html
     page_anchors:
@@ -3671,13 +3696,14 @@ node:
     - application-users
     - assigning-application-roles-to-a-user
     - creating-and-editing-roles
+    - creating-and-managing-groups
     - deleting-user-accounts--teams
     - finance-users
     - leave-a-team
     - node-product-heading
+    - overview
     - switch-organizations
     - user-roles-and-permissions
-    - using-team-accounts
   technical_specifications:
     page: node/resources/technical-specifications.html
     page_anchors:
@@ -3732,17 +3758,6 @@ node:
     - failover-groups-delete
     - failover-groups-list
     - failover-groups-update
-    - formations-commit
-    - formations-create
-    - formations-deploy
-    - formations-fetch
-    - formations-list
-    - formations-stencils-list
-    - gateways-add
-    - gateways-close
-    - gateways-list
-    - gateways-open
-    - gateways-remove
     - help
     - info
     - init
@@ -3776,8 +3791,6 @@ node:
     - settings-list
     - settings-set
     - skycap-listen
-    - snapshots-list
-    - snapshots-render
     - ssh
     - stacks-clear-caches
     - stacks-configuration-apply
@@ -3797,9 +3810,6 @@ node:
     - tags-add
     - tags-delete
     - tail
-    - templates-list
-    - templates-resync
-    - templates-show
     - test
     - tunnel
     - update
@@ -3857,6 +3867,8 @@ node:
     page: node/account/two-factor-authentication.html
     page_anchors:
     - adding-a-physical-fido2-security-key
+    - advanced-protection-level
+    - changing-your-apl-settings
     - enabling-2fa-on-your-account
     - enforcing-2fa-for-your-team
     - if-youre-using-a-usb-based-device
@@ -4204,6 +4216,7 @@ prepress:
     - default-env-vars
     - prepress-product-heading
     - referencing-env-vars-in-manifest-files
+    - referencing-env-vars-in-serviceyml-commands
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -4453,13 +4466,14 @@ prepress:
     - application-users
     - assigning-application-roles-to-a-user
     - creating-and-editing-roles
+    - creating-and-managing-groups
     - deleting-user-accounts--teams
     - finance-users
     - leave-a-team
+    - overview
     - prepress-product-heading
     - switch-organizations
     - user-roles-and-permissions
-    - using-team-accounts
   technical_specifications:
     page: prepress/policies-specifications/technical-specifications.html
     page_anchors:
@@ -4493,6 +4507,8 @@ prepress:
     page: prepress/account/two-factor-authentication.html
     page_anchors:
     - adding-a-physical-fido2-security-key
+    - advanced-protection-level
+    - changing-your-apl-settings
     - enabling-2fa-on-your-account
     - enforcing-2fa-for-your-team
     - if-youre-using-a-usb-based-device
@@ -4832,6 +4848,7 @@ rails:
     page_anchors:
     - cloud-66-tag-propagation
     - external-links
+    - hetzner-virtual-private-cloud
     - how-to-add-your-hetzner-api-key-to-cloud-66
     - rails-product-heading
     - support-for-older-versions-of-ubuntu
@@ -4847,7 +4864,7 @@ rails:
   cloud_maxihost:
     page: rails/how-to-guides/clouds/cloud-maxihost.html
     page_anchors:
-    - how-to-add-your-maxihost-api-key-to-cloud-66
+    - how-to-add-your-latitudesh-api-key-to-cloud-66
     - rails-product-heading
     - support-for-older-versions-of-ubuntu
   cloud_ovh:
@@ -5130,6 +5147,7 @@ rails:
     page_anchors:
     - general-recommendations
     - rails-product-heading
+    - resizing-elasticsearch-servers
   enable_disable_asset_pipeline:
     page: rails/how-to-guides/deployment/enable-disable-asset-pipeline.html
     page_anchors:
@@ -5151,6 +5169,7 @@ rails:
     - pre-defined-environment-variables
     - rails-product-heading
     - referencing-env-vars-in-manifest-files
+    - referencing-env-vars-in-serviceyml-commands
     - referencing-env-vars-on-other-apps
     - referencing-environment-variables
     - referencing-other-env-vars-on-the-same-app
@@ -5432,16 +5451,6 @@ rails:
     - restoring-a-redis-backup
     - restoring-an-automated-backup
     - unarchive-the-backup-files
-  manage_stacks_chatops:
-    page: rails/how-to-guides/common-tools/manage-stacks-chatops.html
-    page_anchors:
-    - cloud-66-chatops
-    - create-a-slack-bot
-    - deregister
-    - download-igor
-    - for-more-information-on-how-to-use-igor
-    - quick-install
-    - rails-product-heading
   managing_advanced_firewall_rules:
     page: rails/how-to-guides/deployment/managing-advanced-firewall-rules.html
     page_anchors:
@@ -5486,6 +5495,7 @@ rails:
     - cloud-66-permissions
     - configuration-of-gems
     - environment-variables
+    - how-to-install-password-protected-gems
     - linux-users-and-permissions
     - overview
     - permissions-errors
@@ -5524,6 +5534,7 @@ rails:
     - example-yaml-for-rackspace-load-balancer
     - gce-load-balancer
     - haproxy
+    - hetzner-cloud-load-balancer
     - key-to-table-headings
     - linode-nodebalancer
     - more-on-manifest-files
@@ -5644,12 +5655,6 @@ rails:
   multi_region_stack:
     page: rails/how-to-guides/deployment/shells/multi-region-stack.html
     page_anchors:
-    - rails-product-heading
-  multi_tenancy:
-    page: rails/how-to-guides/deployment/multi-tenancy.html
-    page_anchors:
-    - multiple-services
-    - overview
     - rails-product-heading
   network_configuration:
     page: rails/references/network-configuration.html
@@ -5996,7 +6001,6 @@ rails:
     - database-servers
     - delete-protection
     - horizontal-scaling
-    - note
     - process-servers
     - rails-product-heading
     - vertical-scaling
@@ -6044,7 +6048,6 @@ rails:
     page_anchors:
     - aws
     - azure
-    - clouda
     - digitalocean
     - gce
     - linode
@@ -6075,6 +6078,21 @@ rails:
     - how-does-cloud-66-determine-my-server-needs-a-restart
     - is-this-important-do-i-need-immediate-action
     - ive-restarted-but-i-still-see-the-notification
+    - rails-product-heading
+  server_snapshots:
+    page: rails/how-to-guides/deployment/server-snapshots.html
+    page_anchors:
+    - aws-ec2
+    - cost-implications
+    - digitalocean
+    - enabling-server-snapshots-at-account-level
+    - enabling-server-snapshots-per-application
+    - google-cloud
+    - hetzner-cloud
+    - how-server-snapshots-work
+    - how-to-enable-server-snapshots
+    - overview
+    - permissions-required
     - rails-product-heading
   server_warning_no_communication:
     page: rails/references/server-warning-no-communication.html
@@ -6306,13 +6324,14 @@ rails:
     - application-users
     - assigning-application-roles-to-a-user
     - creating-and-editing-roles
+    - creating-and-managing-groups
     - deleting-user-accounts--teams
     - finance-users
     - leave-a-team
+    - overview
     - rails-product-heading
     - switch-organizations
     - user-roles-and-permissions
-    - using-team-accounts
   technical_specifications:
     page: rails/resources/technical-specifications.html
     page_anchors:
@@ -6376,12 +6395,6 @@ rails:
     - failover-groups-delete
     - failover-groups-list
     - failover-groups-update
-    - formations-commit
-    - formations-create
-    - formations-deploy
-    - formations-fetch
-    - formations-list
-    - formations-stencils-list
     - gateways-add
     - gateways-close
     - gateways-list
@@ -6420,8 +6433,6 @@ rails:
     - settings-list
     - settings-set
     - skycap-listen
-    - snapshots-list
-    - snapshots-render
     - ssh
     - stacks-clear-caches
     - stacks-configuration-apply
@@ -6441,9 +6452,6 @@ rails:
     - tags-add
     - tags-delete
     - tail
-    - templates-list
-    - templates-resync
-    - templates-show
     - test
     - tunnel
     - update
@@ -6495,6 +6503,7 @@ rails:
     - problems-with-application-components
     - process-or-migration-timeouts
     - rails-product-heading
+    - you-have-already-activated-x-error
   troubleshooting_server_connection:
     page: rails/how-to-guides/deployment/troubleshooting-server-connection.html
     page_anchors:
@@ -6513,6 +6522,8 @@ rails:
     page: rails/account/two-factor-authentication.html
     page_anchors:
     - adding-a-physical-fido2-security-key
+    - advanced-protection-level
+    - changing-your-apl-settings
     - enabling-2fa-on-your-account
     - enforcing-2fa-for-your-team
     - if-youre-using-a-usb-based-device
@@ -7267,13 +7278,14 @@ skycap:
     - application-users
     - assigning-application-roles-to-a-user
     - creating-and-editing-roles
+    - creating-and-managing-groups
     - deleting-user-accounts--teams
     - finance-users
     - leave-a-team
+    - overview
     - skycap-product-heading
     - switch-organizations
     - user-roles-and-permissions
-    - using-team-accounts
   the_basics_index:
     page: skycap/the-basics/index.html
     page_anchors:
@@ -7313,11 +7325,6 @@ skycap:
     - formations-fetch
     - formations-list
     - formations-stencils-list
-    - gateways-add
-    - gateways-close
-    - gateways-list
-    - gateways-open
-    - gateways-remove
     - help
     - info
     - init
@@ -7422,6 +7429,8 @@ skycap:
     page: skycap/account/two-factor-authentication.html
     page_anchors:
     - adding-a-physical-fido2-security-key
+    - advanced-protection-level
+    - changing-your-apl-settings
     - enabling-2fa-on-your-account
     - enforcing-2fa-for-your-team
     - if-youre-using-a-usb-based-device

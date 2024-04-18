@@ -19,7 +19,7 @@ The `.cloud66` folder must in the root of your source code & repo.
 In Maestro there are two opportunities to edit your manifest file:
 
 * After your application code has been analyzed (but before you deploy it) by using the _advanced_ tab.
-* After your application has been deployed, by clicking on *Configuration Files* and then the *Manifest* tab in the Dashboard
+* After your application has been deployed, by clicking on *Application Settings* &rar; *Configuration Files* and then the *Manifest* tab in the Dashboard
 
 {% endif %}
 
@@ -28,7 +28,7 @@ In Maestro there are two opportunities to edit your manifest file:
 In Cloud 66 for Node, there are two opportunities to edit your manifest file:
 
 * After your application code has been analyzed (but before you deploy it) by using the _advanced_ tab.
-* After your application has been deployed, by clicking on *Configuration Files* and then the *Manifest* tab in the Dashboard
+* After your application has been deployed, by clicking on *Application Settings* &rar; *Configuration Files* and then the *Manifest* tab in the Dashboard
 
 {% endif %}
 
@@ -75,8 +75,8 @@ The (mandatory) component settings define how a component is configured. The Man
 
 {% if include.product == "maestro" %}
 *   [Docker](/{{page.collection}}/references/manifest-web-settings.html#docker){% endif %}
-*   [ElasticSearch](/{{page.collection}}/references/manifest-database-settings.html#elasticsearch)
-*   [Gateway](/{{page.collection}}/references/manifest-web-settings.html#gateway)
+*   [ElasticSearch](/{{page.collection}}/references/manifest-database-settings.html#elasticsearch) {% if include.product == "rails" %}
+*   [Gateway](/{{page.collection}}/references/manifest-web-settings.html#gateway) {% endif %}
 *   [GlusterFS](/{{page.collection}}/references/manifest-database-settings.html#glusterfs)
 *   [Load balancers](/{{page.collection}}/references/manifest-loadbalancer-settings.html)
 *   [Memcached](/{{page.collection}}/references/manifest-database-settings.html#memcached)
@@ -175,7 +175,7 @@ These are the parameters that the _server_ section can take:
   <tr>
     <td><code>vendor</code></td>
     <td><div class="tooltip">Build-only &#9432;<span class="tooltiptext">This setting only applies when the app is first built (or cloned) or when new servers are added.</span></div></td>
-    <td>Cloud vendor where the server will be built. Valid values: <code>aws</code>, <code>azure_rm</code> (use <code>azure</code> for older Azure accounts), <code>clouda</code>, <code>digitalocean</code>, <code>googlecloud</code>, <code>hetzner</code>, <code>linode</code>, <code>maxihost</code>, <code>ovh</code>, <code>packet</code>, <code>rackspace</code>, and <code>vultr</code></td>
+    <td>Cloud vendor where the server will be built. Valid values: <code>aws</code>, <code>azure_rm</code> (use <code>azure</code> for older Azure accounts), <code>digitalocean</code>, <code>googlecloud</code>, <code>hetzner</code>, <code>linode</code>, <code>maxihost</code>, <code>ovh</code>, <code>packet</code>, <code>rackspace</code>, and <code>vultr</code></td>
     <td>All</td>
   </tr>
 </tbody>

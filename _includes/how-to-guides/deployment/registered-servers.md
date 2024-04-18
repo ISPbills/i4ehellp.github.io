@@ -39,6 +39,7 @@ To add tags to the registered servers, use the `tags` option:
 $ cx register-server --org="My Team" --server=197.23.65.11 --user=root --tags="dc-1,az US"
 ```
 
+{% if include.product == 'rails' %}
 ## Adding servers behind a gateway
 
 You can add registered servers to Cloud 66 via an on-premises [gateway server](/{{page.collection}}/how-to-guides/deployment/deployment-gateway.html) as long as:
@@ -51,6 +52,7 @@ To add a server behind your gateway:
 1. SSH to the server and run the registered server [registration script](#register-a-server) **with** the `--header X-Fixed-IP:123.123.123.123` option - where `X-Fixed-IP` is set to the IP address that the gateway will use to access the server (usually the private IP address of the server).
 2. Set up the gateway server and configure your application to use it via the manifest as specified above
 3. Open the gateway and add the newly registered server to your application. Because the application is configured to use the gateway, it will go through the gateway and then direct requests to the IP address under `X-Fixed-IP`.
+{% endif %}
 
 ## Server requirements
 
@@ -59,7 +61,7 @@ To add a server behind your gateway:
 - **Connection**: For security reasons, Cloud 66 only connects to your server using your secure keys on **port 22**.
 - **Sudo**: As Cloud 66 connects to your server and provisions applications from scratch, administrator permissions are sometimes necessary. Therefore our script creates a new user to use for deployment that is a member of the sudoers group and that does not require a password to invoke sudo.
 - **Bash**: We currently only support Bourne-again shell (Bash). The error `sh: n: source: not found` during deployment may arise if you are not using the Bash shell.
-- **CPU Architecture**: We only support deploying to 64-bit machines.
+- **CPU Architecture**: We only support deploying to x86 64-bit machines (ARM is NOT currently supported).
 - **Firewalls & security:** Cloud 66 needs the following (TCP) ports open to allow us to deploy and manage your application:
     - `22`
     - Port `3022` set to allow access from `159.89.253.143` (this IP is static)
